@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>📝 Pro To-Do</h1>
+      <div class="header-actions">
+        <button id="themeToggle">🌙</button>
+        <button id="notifyBtn">🔔</button>
+      </div>
+    </header>
+
+    <!-- Add Task Section -->
+    <section class="add-task-box">
+      <input type="text" id="taskInput" placeholder="What do you need to do?">
+      <input type="date" id="taskDate">
+      <select id="prioritySelect">
+        <option value="normal">Priority: Normal</option>
+        <option value="high">Priority: High</option>
+        <option value="low">Priority: Low</option>
+      </select>
+      <button id="addTaskBtn">Add</button>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+      <select id="filterTasks">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="done">Done</option>
+        <option value="overdue">Overdue</option>
+      </select>
+
+      <select id="sortTasks">
+        <option value="newest">Sort: Newest</option>
+        <option value="oldest">Sort: Oldest</option>
+        <option value="priority">Sort: Priority</option>
+      </select>
+
+      <input type="text" id="searchTasks" placeholder="🔍 Search tasks...">
+    </section>
+
+    <!-- Task List -->
+    <section class="task-list-box">
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p id="taskStats">0 Pending | 0 Done | 0 Overdue</p>
+      <button id="clearCompleted">Clear Completed</button>
+      <button id="clearAll">Clear All</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
